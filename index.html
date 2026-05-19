@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ping Pong</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Ping Pong Retro</h1>
+      <div class="controls">W/S = jugador izquierdo • Flechas = jugador derecho • P = pausar • R = reiniciar • D = modo IA</div>
+    </header>
+
+    <div class="game-card">
+      <div class="canvas-wrap">
+        <canvas id="game" width="900" height="500"></canvas>
+        <div class="scanlines"></div>
+      </div>
+
+      <div class="hud">
+        <div class="score">Jugador A: <span id="scoreA">0</span></div>
+        <div class="small">Objetivo: 11 puntos • Modo: <span id="modeLabel">2 jugadores</span></div>
+        <div class="score">Jugador B: <span id="scoreB">0</span></div>
+      </div>
+
+      <div style="display:flex;justify-content:center;margin-top:10px;gap:8px">
+        <div class="settings">
+          <button id="toggleAI" class="btn">Cambiar IA</button>
+          <button id="toggleSound" class="btn">Sonidos: ON</button>
+          <label style="color:rgba(255,255,255,0.7);font-size:13px;margin-left:8px">Dificultad IA</label>
+          <input id="aiRange" type="range" min="0.06" max="0.26" step="0.01" value="0.14" />
+        </div>
+      </div>
+
+      <footer>
+        Hecho con ♥ Por DanielDev87.
+      </footer>
+    </div>
+  </div>
+   <script src="./index.js"></script>
+</body>
+</html>
